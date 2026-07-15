@@ -3,7 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 function App() {
-  const API = "http://localhost:5000/products";
+  const API = `${process.env.REACT_APP_API_URL || "http://localhost:5000"}/products`;
 
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
